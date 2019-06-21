@@ -10,7 +10,14 @@ pipeline {
             echo 'hello chayafghjk'
                 bat script: 'mvn clean package'
             }
+	    post{
+	     	success {
+		echo 'chaya'
+		archieveArtifacts artifacts: '**/*.war'
+		}
+	    }
         }
+
         stage('Test') {
             steps {
                 echo 'Testing..'
