@@ -1,10 +1,14 @@
 pipeline {
-    agent any
+     agent any
+	tools{
+		maven 'maven'
+	}
 
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+            echo 'hello chaya'
+                bat label:'', script: 'mvn clean package'
             }
         }
         stage('Test') {
