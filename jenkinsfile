@@ -13,7 +13,7 @@ pipeline {
 	    post{
 	     	success {
 		echo 'chaya'
-		archieveArtifacts artifacts: '**/*.war'
+		archiveArtifacts '**/*.war'
 		}
 	    }
         }
