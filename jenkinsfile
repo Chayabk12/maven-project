@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            echo 'hello chaya'
+            echo 'hello chayafghjk'
                 bat script: 'mvn clean package'
             }
         }
